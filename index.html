@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego & Marcelo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Envelope inicial -->
+<div id="convite-overlay">
+  <img src="imagens/convite.png" alt="Convite" class="convite-img">
+</div>
+
+<nav id="navbar">
+  <ul>
+    <li><a href="#inicio">INÍCIO</a></li>
+    <li><a href="#recepcao">RECEPÇÃO</a></li>
+    <li><a href="#cerimonia">CERIMÔNIA</a></li>
+    <li><a href="#manual">MANUAL DO<br>CONVIDADO</a></li> 
+    <li><a href="#presentes">PRESENTES</a></li>
+    <li><a href="#rsvp">CONFIRME SUA<br>PRESENÇA</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <img src="imagens/casal.jpg" class="hero-img">
+  <div class="hero-content">
+    <img src="imagens/monograma.png" class="monograma">
+  </div>
+</header>
+
+<section id="inicio" class="begin-section intro fade">
+  <p>Estamos muito felizes em compartilhar este momento tão especial com vocês. Cada detalhe deste dia foi preparado com carinho, e ter a sua presença ao nosso lado tornará tudo ainda mais inesquecível!</p>
+</section>
+
+<section class="countdown-section fade">
+  <h2 class="countdown-title">Contagem Regressiva</h2>
+
+  <div class="countdown-box">
+    <div><span id="dias">00</span><p>DIAS</p></div>
+    <div><span id="horas">00</span><p>HORAS</p></div>
+    <div><span id="minutos">00</span><p>MINUTOS</p></div>
+    <div><span id="segundos">00</span><p>SEGUNDOS</p></div>
+  </div>
+</section>
+
+<section id="recepcao" class="recepcao-section fade">
+  <div class="recepcao-hero">
+    <h2>Recepção</h2>
+  </div>
+
+  <div class="recepcao-content">
+    <p>A <strong>recepção</strong> será realizada no Altos da Estância. Pedimos que sejam pontuais, observando o horário abaixo!</p>
+    <p><strong>Endereço:</strong> Estrada Valter Rudolfo Cassel, 4660 - Lomba Grande, Novo Hamburgo - RS</p>
+    <p><strong>Horário:</strong> 17:00</p>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps?q=Altos%20da%20Est%C3%A2ncia&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="cerimonia" class="cerimonia-section fade">
+  <div class="cerimonia-hero">
+    <h2>Cerimônia</h2>
+  </div>
+
+  <div class="cerimonia-content">
+    <p>A <strong>cerimônia</strong> será realizada no mesmo lugar. O cerimonialista Laércio irá guiar os convidados para o local.</p>
+  </div>
+</section>
+
+<section id="manual" class="manual-section fade">
+  <div class="manual-hero">
+    <h2>Manual do Convidado</h2>
+  </div>
+
+  <div class="manual-content">
+    <div class="manual-rules">
+      <p>Confirme sua presença abaixo</p>
+      <p>Convidado não convida</p>
+      <p>Seja pontual</p>
+      <p>Não use branco</p>
+      <p>Não atrapalhe o fotógrafo</p>
+      <p>Não leve itens de decoração</p>
+      <p>Evite confusões e desfrute de cada detalhe</p>
+      <p>Não faça comentários negativos</p>
+      <p>Não saia sem se despedir dos noivos</p>
+      <p>Tire muitas fotos e nos marque no instagram!</p>
+      <p>Aproveite bastante!</p>
+      <p>Dress code: social leve</p>
+    </div>
+  
+    <h3 class="dresscode-title">Exemplos de dress code:</h3>
+    <div class="dresscode-images">
+      <img src="imagens/dresscode_feminino1.jpeg" alt="Dress code feminino 1">
+      <img src="imagens/dresscode_feminino2.jpeg" alt="Dress code feminino 2">
+      <img src="imagens/dresscode_feminino3.jpg" alt="Dress code feminino 3">
+      <img src="imagens/dresscode_masculino1.jpeg" alt="Dress code masculino 1">
+      <img src="imagens/dresscode_masculino2.jpeg" alt="Dress code masculino 2">
+      <img src="imagens/dresscode_masculino3.jpeg" alt="Dress code masculino 3">
+    </div>
+  </div>
+</section>
+
+<section id="presentes" class="presentes-section fade">
+  <div class="presentes-hero">
+    <h2>Lista de Presentes</h2>
+  </div>
+
+  <div class="presentes-content">
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left hidden" id="prevBtn">
+        &#10094;
+      </button>
+  
+      <div class="carousel-viewport">
+        <div class="gifts-track" id="giftsTrack">
+          <!-- Página 1 -->
+          <div class="gift-page">
+            <!-- Presente 1 -->
+            <div class="gift">
+              <img src="imagens/passeio-vinicola.webp" alt="passeio-vinicola">
+              <div class="gift-title">
+                <p><strong>Passeio em Vinícola para Casal</strong></p>
+              </div>
+              <p class="gift-price">R$ 570,38</p>
+              <button class="gift-button" onclick="gerarPix(570.38, this)">Presentear</button>
+            </div>
+            <!-- Presente 2 -->
+            <div class="gift">
+              <img src="imagens/passeio-urubici.jpg" alt="passeio-urubici">
+              <div class="gift-title">
+                <p><strong>Cota de Passeio em Urubici - Santa Catarina</strong></p>
+              </div>
+              <p class="gift-price">R$ 391,79</p>
+              <button class="gift-button" onclick="gerarPix(391.79, this)">Presentear</button>
+            </div>
+            <!-- Presente 3 -->
+            <div class="gift">
+              <img src="imagens/cafeteira.webp" alt="cafeteira">
+              <div class="gift-title">
+                <p><strong>Cafeteira</strong></p>
+              </div>
+              <p class="gift-price">R$ 220,10</p>
+              <button class="gift-button" onclick="gerarPix(220.10, this)">Presentear</button>
+            </div>
+            <!-- Presente 4 -->
+            <div class="gift">
+              <img src="imagens/sacada.jpeg" alt="sacada">
+              <div class="gift-title">
+                <p><strong>Cota de Reforma da Sacada</strong></p>
+              </div>
+              <p class="gift-price">R$ 774,49</p>
+              <button class="gift-button" onclick="gerarPix(774.49, this)">Presentear</button>
+            </div>
+          </div>
+          <!-- Página 2 -->
+          <div class="gift-page">
+            <!-- Presente 5 -->
+            <div class="gift">
+              <img src="imagens/kit-vinhos.webp" alt="kit-vinhos">
+              <div class="gift-title">
+                <p><strong>Kit de Vinhos</strong></p>
+              </div>
+              <p class="gift-price">R$ 365,90</p>
+              <button class="gift-button" onclick="gerarPix(365.90, this)">Presentear</button>
+            </div>
+            <!-- Presente 6 -->
+            <div class="gift">
+              <img src="imagens/custos-viagem.avif" alt="custos-viagem">
+              <div class="gift-title">
+                <p><strong>Cota para Pagar a Lua de Mel</strong></p>
+              </div>
+              <p class="gift-price">R$ 389,90</p>
+              <button class="gift-button" onclick="gerarPix(389.90, this)">Presentear</button>
+            </div>
+            <!-- Presente 7 -->
+            <div class="gift">
+              <img src="imagens/passagem-aerea.webp" alt="passagem-aerea">
+              <div class="gift-title">
+                <p><strong>Cota de Passagem Aérea</strong></p>
+              </div>
+              <p class="gift-price">R$ 509,29</p>
+              <button class="gift-button" onclick="gerarPix(509.29, this)">Presentear</button>
+            </div>
+            <!-- Presente 8 -->
+            <div class="gift">
+              <img src="imagens/jogo-de-cama.webp" alt="jogo-de-cama">
+              <div class="gift-title">
+                <p><strong>Jogo de Cama Queen Completo</strong></p>
+              </div>
+              <p class="gift-price">R$ 439,50</p>
+              <button class="gift-button" onclick="gerarPix(439.50, this)">Presentear</button>
+            </div>
+          </div>
+          <!-- Página 3 -->
+          <div class="gift-page">
+            <!-- Presente 9 -->
+            <div class="gift">
+              <img src="imagens/cooktop-portatil.jpg" alt="cooktop-portatil">
+              <div class="gift-title">
+                <p><strong>Cooktop Portátil</strong></p>
+              </div>
+              <p class="gift-price">R$ 696,89</p>
+              <button class="gift-button" onclick="gerarPix(696.89, this)">Presentear</button>
+            </div>
+            <!-- Presente 10 -->
+            <div class="gift">
+              <img src="imagens/playstation.jpg" alt="playstation">
+              <div class="gift-title">
+                <p><strong>Cota de Playstation 5</strong></p>
+              </div>
+              <p class="gift-price">R$ 345,83</p>
+              <button class="gift-button" onclick="gerarPix(345.83, this)">Presentear</button>
+            </div>
+            <!-- Presente 11 -->
+            <div class="gift">
+              <img src="imagens/quadros.webp" alt="quadros">
+              <div class="gift-title">
+                <p><strong>Quadros</strong></p>
+              </div>
+              <p class="gift-price">R$ 319,54</p>
+              <button class="gift-button" onclick="gerarPix(319.54, this)">Presentear</button>
+            </div>
+            <!-- Presente 12 -->
+            <div class="gift">
+              <img src="imagens/kit-abajur.webp" alt="kit-abajur">
+              <div class="gift-title">
+                <p><strong>Kit de Abajures</strong></p>
+              </div>
+              <p class="gift-price">R$ 199,74</p>
+              <button class="gift-button" onclick="gerarPix(199.74, this)">Presentear</button>
+            </div>
+          </div>
+          <!-- Página 4 -->
+          <div class="gift-page">
+            <!-- Presente 13 -->
+            <div class="gift">
+              <img src="imagens/churrasqueira.jpg" alt="churrasqueira">
+              <div class="gift-title">
+                <p><strong>Churrasqueira Grill</strong></p>
+              </div>
+              <p class="gift-price">R$ 433,27</p>
+              <button class="gift-button" onclick="gerarPix(433.27, this)">Presentear</button>
+            </div>
+            <!-- Presente 14 -->
+            <div class="gift">
+              <img src="imagens/skin-care.webp" alt="skin-care">
+              <div class="gift-title">
+                <p><strong>Kit Produtos de Skin Care Completo</strong></p>
+              </div>
+              <p class="gift-price">R$ 254,41</p>
+              <button class="gift-button" onclick="gerarPix(254.41, this)">Presentear</button>
+            </div>
+            <!-- Presente 15 -->
+            <div class="gift">
+              <img src="imagens/jantar-especial.jpg" alt="jantar-especial">
+              <div class="gift-title">
+                <p><strong>Jantar Especial</strong></p>
+              </div>
+              <p class="gift-price">R$ 370,00</p>
+              <button class="gift-button" onclick="gerarPix(370, this)">Presentear</button>
+            </div>
+            <!-- Presente 16 -->
+            <div class="gift">
+              <img src="imagens/cura-da-ressaca.webp" alt="cura-da-ressaca">
+              <div class="gift-title">
+                <p><strong>Cura da Ressaca</strong></p>
+              </div>
+              <p class="gift-price">R$ 199,80</p>
+              <button class="gift-button" onclick="gerarPix(199.80, this)">Presentear</button>
+            </div>
+          </div>
+          <!-- Página 5 -->
+          <div class="gift-page">
+            <!-- Presente 17 -->
+            <div class="gift">
+              <img src="imagens/passeio-paris.avif" alt="passeio-paris">
+              <div class="gift-title">
+                <p><strong>Passeio em Paris</strong></p>
+              </div>
+              <p class="gift-price">R$ 1000,00</p>
+              <button class="gift-button" onclick="gerarPix(1000, this)">Presentear</button>
+            </div>
+            <!-- Presente 18 -->
+            <div class="gift">
+              <img src="imagens/kit-bebidas.webp" alt="kit-bebidas">
+              <div class="gift-title">
+                <p><strong>Kit de Taças e Bebidas</strong></p>
+              </div>
+              <p class="gift-price">R$ 242,55</p>
+              <button class="gift-button" onclick="gerarPix(242.55, this)">Presentear</button>
+            </div>
+            <!-- Presente 19 -->
+            <div class="gift">
+              <img src="imagens/spa-day.jpg" alt="spa">
+              <div class="gift-title">
+               <p><strong>Dia de Spa</strong></p>
+              </div>
+              <p class="gift-price">R$ 364,20</p>
+              <button class="gift-button" onclick="gerarPix(364.20, this)">Presentear</button>
+            </div>
+            <!-- Presente 20 -->
+            <div class="gift">
+              <img src="imagens/bomboniere.webp" alt="bomboniere">
+              <div class="gift-title">
+                <p><strong>Bomboniere</strong></p>
+              </div>
+              <p class="gift-price">R$ 309,99</p>
+              <button class="gift-button" onclick="gerarPix(309.99, this)">Presentear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <button class="carousel-btn right" id="nextBtn">
+        &#10095;
+      </button>
+    </div>
+  </div>
+
+  <div id="pixModal" class="pix-modal">
+    <div class="pix-modal-content">
+      <div class="pix-modal-body">
+        <div class="pix-left">
+          <h3>Escaneie o QR code ou copie o código PIX:</h3>
+        <canvas id="qrcode"></canvas>
+        </div>
+
+        <div class="pix-right">
+          <div class="pix-form">
+            <div class="pix-field">
+              <label for="giftName">Nome(s):</label>
+              <input
+                type="text"
+                id="giftName"
+                placeholder="(opcional)">
+            </div>
+          
+            <div class="pix-field">
+              <label for="giftMessage"><strong>Se quiser, nos deixe uma mensagem!</strong></label>
+              <textarea
+                id="giftMessage"
+                placeholder="(opcional) - ao escrever, a mensagem será enviada quando clicar no botão 'Fechar'"
+                rows="4">
+              </textarea>
+            </div>
+          </div>
+          <div class="pix-actions">
+            <button onclick="copiarPix()">Copiar PIX</button>
+            <button onclick="fecharModal()">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rsvp" class="presenca-section fade">
+  <div class="presenca-hero">
+    <h2>Confirme sua presença!</h2>
+  </div>
+
+  <div class="presenca-content">
+    <form id="rsvpForm">
+      <label id="nome-formulario" for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+      <label id="telefone-formulario" for="telefone">Telefone:</label>
+      <input name="telefone" inputmode="numeric" placeholder="51 99999-9999" required>
+
+      <div class="radio-group">
+        <label><input type="radio" name="presenca" value="Sim" required> Vou comparecer!</label>
+      </div>
+
+      <button class="button-formulario" type="submit">Confirmar</button>
+    </form>
+  
+    <p id="msg"></p>
+  </div>
+</section>
+
+<section class="duvidas-section fade">
+  <div class="duvidas-hero">
+    <h2>Dúvidas?</h2>
+  </div>
+
+  <div class="duvidas-content">
+    <p>Em caso de dúvidas, entre em contato!</p>
+    <p>Diego: 
+      <a href="https://wa.me/5551999446944" target="_blank">(51) 99944-6944</a>
+    </p>
+    <p>Marcelo: 
+      <a href="https://wa.me/5551996421920" target="_blank">(51) 99642-1920</a>
+    </p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
