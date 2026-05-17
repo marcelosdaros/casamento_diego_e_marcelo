@@ -391,7 +391,6 @@ nav.scrolled a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px 40px;
-  margin-bottom: 30px;
   text-align: left;
 }
 
@@ -404,6 +403,20 @@ nav.scrolled a {
 
 /* ícone ✔️ */
 .manual-rules p::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.final-rule {
+  position: relative;
+  padding-left: 22px;
+  margin-top: 12px;
+  color: #555;
+}
+
+.final-rule::before {
   content: "✔️";
   position: absolute;
   left: 0;
