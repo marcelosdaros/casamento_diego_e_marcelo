@@ -414,6 +414,7 @@ nav.scrolled a {
   padding-left: 22px;
   margin-top: 12px;
   color: #555;
+  text-align: left;
 }
 
 .final-rule::before {
